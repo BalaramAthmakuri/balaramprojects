@@ -1,0 +1,310 @@
+/*THIS PROJECT IS A SIMPLE AIRLINES RESERVATION SYSTEM
+  IN FUTURE SOME AIRLINES GOING TO RUN ALL THEIR FLIGHTS ONLY IN ONE NAME(FOR PUBLIC VIEW)
+  BUT INTERNALLY THE COMPANIES MANAGE THE SYSTEM WHICH IS THERE AS NOW 
+  IN THIS SYSTEM YOU CAN BOOK FLIGHT TICKETS AS YOU WISH IN THE AIRLINES
+  YOU CAN GET YOUR BOARDING PASSES DIRECTLY FROM THIS SYSTEM*/
+#include <stdio.h>
+struct ps{
+    char p[1000];
+};
+char printing1(char char1[1000],char c1[1000],int p1[1000],int l1[1000],char char31[1000],char char41[1000],char char51[1000],char char61[1000]);
+char printing2(char char2[1000],char c2[1000],int p2[1000],int l2[1000],char char32[1000],char char42[1000],char char52[1000],char char62[1000]);
+char printing3(char char3[1000],char c3[1000],int p3[1000],int l3[1000],char char33[1000],char char43[1000],char char53[1000],char char63[1000]);
+char printing4(char char4[1000],char c4[1000],int p4[1000],int l4[1000],char char34[1000],char char44[1000],char char54[1000],char char64[1000]);
+char printing5(char char5[1000],char c5[1000],int p5[1000],int l5[1000],char char35[1000],char char45[1000],char char55[1000],char char65[1000]);
+char flight1(char char111[1000],char c111[1000],int t111[1000],int l111,char char3331[1000],char char4441[1000],char char5551[1000],char char6661[1000]);
+char flight2(char char222[1000],char c222[1000],int t222[1000],int l222,char char3332[1000],char char4442[1000],char char5552[1000],char char6662[1000]);
+char flight3(char char333[1000],char c333[1000],int t333[1000],int l333,char char3333[1000],char char4443[1000],char char5553[1000],char char6663[1000]);
+char flight4(char char444[1000],char c444[1000],int t444[1000],int l444,char char3334[1000],char char4444[1000],char char5554[1000],char char6664[1000]);
+char flight5(char char555[1000],char c555[1000],int t555[1000],int l555,char char3335[1000],char char4445[1000],char char5555[1000],char char6665[1000]);
+
+int main()
+{
+    int i,o,v,w,x,y,r,s,t,u,k,e,f,h,p,m,m1,m2,n,ka,ba;
+    int c[1000];
+    int a[1000];
+    int l[1000];
+    struct ps g[1000];
+    char a2[1000][1000];
+    char a3[1000][1000];
+    char a4[1000][1000];
+    char a5[1000][1000];
+    char a6[1000][1000];
+    char b[1000][1000];
+    char a7[100];
+    char a8[]="YES";
+	char a9[]="NO";
+	char a10[]="ECONOMY";
+	char a11[]="PREMIUM-ECONOMY";
+	char a12[]="BUSINESS";
+	char a13[]="INDIGO";
+	char a14[]="SPICE-JET";
+	char a15[]="AIR INDIA";
+	char a16[]="GO AIR";
+	char a17[]="JET AIRWAYS";
+    printf("Enter many tickets you want to take : ");
+    scanf("%d",&o);
+    printf("PLEASE ENTER YOUR DETAILS IN UPPERCASE\n");
+    printf("Enter the name of passengers in order :\n");
+    for(i=0;i<=o;i++)
+    {
+        gets(b[i]);
+    }
+    for(v=0;v<o;v++)
+	{
+	    printf("PLEASE ENTER YOUR DETAILS IN UPPERCASE\n");
+	    printf("Enter the gender for passenger %d: ",v+1);
+	    scanf(" %s",&g[v].p);
+	}
+	for(w=0;w<o;w++)
+	{
+	    printf("Enter the age for passenger %d: ",w+1);
+	    scanf("%d",&c[w]);
+	}
+	
+	for(x=0;x<o;x++)
+    {
+        printf("Enter the Mobile Number for passenger %d: ",x+1);
+        scanf("%d",&a[x]);
+    }
+	for(y=0;y<o;y++)
+	{
+	    printf("PLEASE ENTER YOUR DETAILS IN UPPERCASE\n");
+	    printf("Enter  email address for passenger %d: ",y+1);
+	    scanf("%s",a2[y]);
+	}
+	for(r=0;r<o;r++)
+	{
+	    printf("PLEASE ENTER YOUR DETAILS IN UPPERCASE\n");
+	    printf("Enter the place from where  passenger  %d is travelling : ",r+1);
+	    scanf("%s",a3[r]);
+	}
+	for(s=0;s<o;s++)
+	{
+	    printf("PLEASE ENTER YOUR DETAILS IN UPPERCASE\n");
+	    printf("Enter the place to where  passenger %d want to go : ",s+1);
+	    scanf("%s",a4[s]);
+	}
+	printf("PLEASE ENTER YOUR DETAILS IN UPPERCASE\n");
+	printf("The available companies are: INDIGO , SPICE-JET , AIR INDIA , GO AIR , JET AIRWAYS\n");
+	printf("Please choose the Airlines for passengers in order :\n ");
+    for(t=0;t<=o;t++)
+    {
+        gets(a5[t]);
+    }
+	for(u=0;u<o;u++)
+	{
+	    printf("PLEASE ENTER YOUR DETAILS IN UPPERCASE\n");
+	    printf("The classes are ECONOMY,PREMIUM-ECONOMY,BUSINESS\n");
+	    printf("Enter the class for passenger %d: ",u+1);
+	    scanf("%s",a6[u]);
+	}
+	printf("Do you want web check - in now : ");
+    scanf("%s",a7);
+    
+	
+	
+	if(strcmp(a7, a8)==0)
+	{
+	    for(p=0;p<o;p++)
+	    {
+	       if(strcmp(a6[p], a10)==0)
+	        {
+	            e=100;
+	            printf("The available tickets are in %s class are : ",a6[p]);
+		        for(m=0;m<100;m++)
+                {
+                    if(m+1!=l[p-1])
+                    {
+                    printf("%d,",m+1);
+                    }
+                }
+		        printf("\nselect the seats: ");
+		       
+		            scanf("%d",&l[p]);
+		            e=e-1;
+	        }else if(strcmp(a6[p], a11)==0){
+	            f=50;
+	            printf("The available tickets are in %s class are : ",a6[p]);
+		        for(m1=0;m1<50;m1++)
+                {
+                    if(m1+1!=l[p-1])
+                    {
+                    printf("%d,",m1+1);
+                    }
+                }
+		        printf("\nselect the seats: ");
+		       
+		            scanf("%d",&l[p]);
+		            f=f-1;
+	        }else if(strcmp(a6[p], a12)==0){
+	            h=25;
+	            printf("The available tickets are in %s class are : ",a6[p]);
+		        for(m2=0;m2<25;m2++)
+                {
+                    if(m2+1!=l[p-1])
+                    {
+                    printf("%d,",m2+1);
+                    }
+                }
+		        printf("\nselect the seats: ");
+		       
+		            scanf("%d",&l[p]);
+		            h=h-1;
+	        }
+	    }
+	printf("Your seats are confirmed !\n");
+	printf("Your tickets :\n");
+	for(ka=0;ka<o;ka++)
+    {
+        if(strcmp(a5[ka+1],a13)==0)
+        {
+            flight1(b[ka+1],g[ka].p,c[ka],l[ka],a3[ka],a4[ka],a5[ka+1],a6[ka]);
+        }
+        if(strcmp(a5[ka+1],a14)==0)
+        {
+            flight2(b[ka+1],g[ka].p,c[ka],l[ka],a3[ka],a4[ka],a5[ka+1],a6[ka]);
+        }
+        if(strcmp(a5[ka+1],a15)==0)
+        {
+            flight3(b[ka+1],g[ka].p,c[ka],l[ka],a3[ka],a4[ka],a5[ka+1],a6[ka]);
+        }
+        if(strcmp(a5[ka+1],a16)==0)
+        {
+            flight4(b[ka+1],g[ka].p,c[ka],l[ka],a3[ka],a4[ka],a5[ka+1],a6[ka]);
+        }
+        if(strcmp(a5[ka+1],a17)==0)
+        {
+            flight5(b[ka+1],g[ka].p,c[ka],l[ka],a3[ka],a4[ka],a5[ka+1],a6[ka]);
+        }
+    }
+	}else if(strcmp(a7, a9)==0){
+	    	printf("Your seats are confirmed !\n");
+	        printf("Your tickets :\n");
+        for(ba=0;ba<o;ba++)
+        {
+            if(strcmp(a5[ba+1],a13)==0)
+            {
+                flight1(b[ba+1],g[ba].p,c[ba],ba+1,a3[ba],a4[ba],a5[ba+1],a6[ba]);
+            }
+            if(strcmp(a5[ba+1],a14)==0)
+            {
+                flight2(b[ba+1],g[ba].p,c[ba],ba+1,a3[ba],a4[ba],a5[ba+1],a6[ba]);
+            }
+            if(strcmp(a5[ba+1],a15)==0)
+            {
+                flight3(b[ba+1],g[ba].p,c[ba],ba+1,a3[ba],a4[ba],a5[ba+1],a6[ba]);
+            }
+            if(strcmp(a5[ba+1],a16)==0)
+            {
+                flight4(b[ba+1],g[ba].p,c[ba],ba+1,a3[ba],a4[ba],a5[ba+1],a6[ba]);
+            }
+            if(strcmp(a5[ba+1],a17)==0)
+            {
+                flight5(b[ba+1],g[ba].p,c[ba],ba+1,a3[ba],a4[ba],a5[ba+1],a6[ba]);
+            }
+        }
+	}
+    return 0;
+}
+
+char printing1(char char1[1000],char c1[1000],int p1[1000],int l1[1000],char char31[1000],char char41[1000],char char51[1000],char char61[1000]){
+    printf("passenger %s's ticket :                                              \n",char1);
+    printf("\n");
+    printf("                                 %s                                  \n",char51);
+    printf("   %s                     travelling from: %s to: %s in flight 6E 444 \n",char1,char31,char41);
+    printf("   AGE:%d Gender: %s             seat number:%d/%s CLASS                      \n",p1,c1,l1,char61);
+    printf("           Thank you for choosing  %s have a safe and nice journey   \n",char51);
+    printf("\n");
+}
+char printing2(char char2[1000],char c2[1000],int p2[1000],int l2[1000],char char32[1000],char char42[1000],char char52[1000],char char62[1000]){
+    printf("passenger %s's ticket :                                              \n",char2);
+    printf("\n");
+    printf("                                 %s                                  \n",char52);
+    printf("   %s                     travelling from: %s to: %s in flight SG 3021 \n",char2,char32,char42);
+    printf("   AGE:%d Gender: %s             seat number:%d/%s CLASS                      \n",p2,c2,l2,char62);
+    printf("           Thank you for choosing  %s have a safe and nice journey   \n",char52);
+    printf("\n");
+}
+char printing3(char char3[1000],char c3[1000],int p3[1000],int l3[1000],char char33[1000],char char43[1000],char char53[1000],char char63[1000]){
+    printf("passenger %s's ticket :                                              \n",char3);
+    printf("\n");
+    printf("                                 %s                                  \n",char53);
+    printf("   %s                     travelling from: %s to: %s in flight AIR 1437 \n",char3,char33,char43);
+    printf("   AGE:%d Gender: %s             seat number:%d/%s CLASS                      \n",p3,c3,l3,char63);
+    printf("           Thank you for choosing  %s have a safe and nice journey   \n",char53);
+    printf("\n");
+}
+char printing4(char char4[1000],char c4[1000],int p4[1000],int l4[1000],char char34[1000],char char44[1000],char char54[1000],char char64[1000]){
+    printf("passenger %s's ticket :                                              \n",char4);
+    printf("\n");
+    printf("                                 %s                                  \n",char54);
+    printf("   %s                     travelling from: %s to: %s in flight A320 \n",char4,char34,char44);
+    printf("   AGE:%d Gender: %s             seat number:%d/%s CLASS                      \n",p4,c4,l4,char64);
+    printf("           Thank you for choosing  %s have a safe and nice journey   \n",char54);
+    printf("\n");
+}
+char printing5(char char5[1000],char c5[1000],int p5[1000],int l5[1000],char char35[1000],char char45[1000],char char55[1000],char char65[1000]){
+    printf("passenger %s's ticket :                                              \n",char5);
+    printf("\n");
+    printf("                                 %s                                  \n",char55);
+    printf("   %s                     travelling from: %s to: %s in flight 9W2115 \n",char5,char35,char45);
+    printf("   AGE:%d Gender: %s             seat number:%d/%s CLASS                      \n",p5,c5,l5,char65);
+    printf("           Thank you for choosing  %s have a safe and nice journey   \n",char55);
+    printf("\n");
+}
+char flight1(char char111[1000],char c111[1000],int t111[1000],int l111,char char3331[1000],char char4441[1000],char char5551[1000],char char6661[1000]){
+    
+    printf("passenger %s's ticket :                                              \n",char111);
+    printf("\n");
+    printf("                                 %s                                  \n",char5551);
+    printf("   %s                     travelling from: %s to: %s in flight 6E 444 \n",char111,char3331,char4441);
+    printf("   AGE:%d Gender: %s             seat number:%d/%s CLASS                     \n",t111,c111,l111,char6661);
+    printf("           Thank you for choosing  %s have a safe and nice journey   \n",char5551);
+    printf("\n");
+}
+char flight2(char char222[1000],char c222[1000],int t222[1000],int l222,char char3332[1000],char char4442[1000],char char5552[1000],char char6662[1000]){
+    
+    printf("passenger %s's ticket :                                              \n",char222);
+    printf("\n");
+    printf("                                 %s                                  \n",char5552);
+    printf("   %s                     travelling from: %s to: %s in flight SG 3021 \n",char222,char3332,char4442);
+    printf("   AGE:%d Gender: %s             seat number:%d/%s CLASS                     \n",t222,c222,l222,char6662);
+    printf("           Thank you for choosing  %s have a safe and nice journey   \n",char5552);
+    printf("\n");
+}
+char flight3(char char333[1000],char c333[1000],int t333[1000],int l333,char char3333[1000],char char4443[1000],char char5553[1000],char char6663[1000]){
+    
+    printf("passenger %s's ticket :                                              \n",char333);
+    printf("\n");
+    printf("                                 %s                                  \n",char5553);
+    printf("   %s                     travelling from: %s to: %s in flight AIR 1437 \n",char333,char3333,char4443);
+    printf("   AGE:%d Gender: %s             seat number:%d/%s CLASS                     \n",t333,c333,l333,char6663);
+    printf("           Thank you for choosing  %s have a safe and nice journey   \n",char5553);
+    printf("\n");
+}
+char flight4(char char444[1000],char c444[1000],int t444[1000],int l444,char char3334[1000],char char4444[1000],char char5554[1000],char char6664[1000]){
+    
+    printf("passenger %s's ticket :                                              \n",char444);
+    printf("\n");
+    printf("                                 %s                                  \n",char5554);
+    printf("   %s                     travelling from: %s to: %s in flight A320 \n",char444,char3334,char4444);
+    printf("   AGE:%d Gender: %s             seat number:%d/%s CLASS                     \n",t444,c444,l444,char6664);
+    printf("           Thank you for choosing  %s have a safe and nice journey   \n",char5554);
+    printf("\n");
+}
+char flight5(char char555[1000],char c555[1000],int t555[1000],int l555,char char3335[1000],char char4445[1000],char char5555[1000],char char6665[1000]){
+    
+    printf("passenger %s's ticket :                                              \n",char555);
+    printf("\n");
+    printf("                                 %s                                  \n",char5555);
+    printf("   %s                     travelling from: %s to: %s in flight 9W2115 \n",char555,char3335,char4445);
+    printf("   AGE:%d Gender: %s             seat number:%d/%s CLASS                     \n",t555,c555,l555,char6665);
+    printf("           Thank you for choosing  %s have a safe and nice journey   \n",char5555);
+    printf("\n");
+}
+
+ 
+ 
+ 
+
